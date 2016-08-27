@@ -1,0 +1,54 @@
+{% extends "default.html" %}
+
+{% block style %}
+    <style>
+        img  {
+            width: 250px;
+        }
+
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            text-align: center;
+            right: 0;
+        }
+
+        .content h1 {
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .content p {
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .content p span {
+            background-color: #e74241;
+            color: #fefefe;
+            padding: 10px 15px;
+            line-height: 3;
+            border-radius: 2px;
+        }
+
+        .content .hidden {
+            color: #fefefe;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <div class="content">
+        <img src="/static/weasyprint.png" alt="">
+        <h1>Hi There</h1>
+        <p>I can create pdf files what you can <span>imagine!</span></p>
+        <p class="hidden">But not at all :(</p>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <a href="http://localhost:8080{{ url_for("render_page", template_name="second_example") }}">Next</a>
+{% endblock %}

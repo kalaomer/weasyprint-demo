@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weasyprint Demo</title>
+
+    <style>
+        @page {
+            size: 8.260in 8.260in;
+            margin: 0cm;
+            padding: 0cm;
+            border: none;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: "Roboto" !important;
+            font-weight: 100;
+        }
+
+        html {
+            font-size: 12px;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 8.260in;
+            width: 8.260in;
+        }
+        
+        #footer {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: #ddd;
+            padding: 15px 25px;
+            text-align: center;
+        }
+
+        #footer a {
+            text-decoration: none;
+            font-size: 24px;
+        }
+    </style>
+
+    {% block style %}
+
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+
+    {% endblock %}
+
+    <div id="footer">
+        {% block footer %}
+            Teşekkürler
+        {% endblock %}
+    </div>
+</body>
+</html>
